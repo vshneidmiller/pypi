@@ -9,7 +9,20 @@ setup(
     author="Viacheslav Shneidmillier",
     author_email="v.shneidmiller@gmail.com",
     url="https://github.com/vshneidmiller/pypi",
-    packages=find_packages(),
+    # When your source code is in a subdirectory under the project root, e.g.
+    # `src/`, it is necessary to specify the `package_dir` argument.
+    package_dir={"": "src"},  # Optional
+    # You can just specify package directories manually here if your project is
+    # simple. Or you can use find_packages().
+    #
+    # Alternatively, if you just want to distribute a single Python file, use
+    # the `py_modules` argument instead as follows, which will expect a file
+    # called `my_module.py` to exist:
+    #
+    #   py_modules=["my_module"],
+    #
+    packages=find_packages(where="src"),  # Required
+
     include_package_data=True,
     install_requires=[
         "requests",
@@ -21,9 +34,11 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    entry_points={
-        'console_scripts': [
-            'pypi-slava=main:main',
+    # Entry points. The following would provide a command called `sample` which
+    # executes the function `main` from this package when invoked:
+    entry_points={  # Optional
+        "console_scripts": [
+            "sample=sample:main",
         ],
     },
     python_requires='>=3.6',
