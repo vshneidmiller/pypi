@@ -1,1 +1,4 @@
-print("hello pypi")
+
+
+def main():
+    print("hello pypi")
