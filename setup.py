@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="pypi-slava",
-    version="0.0.3",
+    version="0.0.4",
     description="test tool",
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
