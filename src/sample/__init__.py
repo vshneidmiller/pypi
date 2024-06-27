@@ -1,4 +1,4 @@
-from functions import *
+from sample.functions import *
 
 def main():
     """Entry point for the application script"""

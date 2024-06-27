@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="pypi-slava",
-    version="0.0.12",
+    version="0.0.13",
     description="test tool",
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
@@ -24,11 +24,7 @@ setup(
     packages=find_packages(where="src"),  # Required
 
     include_package_data=True,
-    install_requires=[
-        "requests",
-        "PyYAML",
-        "robotframework"
-    ],
+    install_requires=[],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
